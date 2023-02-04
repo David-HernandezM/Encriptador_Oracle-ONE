@@ -1,0 +1,327 @@
+body {  
+  display: flex;
+  background-color: #F3F5FC;
+  font-family: Arial;
+  margin: 0;
+  height: 100vh;
+}
+
+.encryptor__text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.text, .options, .logo {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 10%;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.logo h1 {
+  font-size: 25px;
+  color: #343A40;
+}
+
+.logo .github__profile__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 31px;
+  border-radius: 50px;
+  margin-left: 2%;
+}
+
+.logo .github__profile__link img {
+  margin: 0;
+  width: 30px;
+}
+
+.logo .github__profile__link:hover img {
+  animation: github_animation 0.5s infinite ease-in-out;
+}
+
+@keyframes github_animation {
+  0% {
+    width: 30px;
+  }
+
+  50% {
+    width: 34px;
+  }
+
+  100% {
+    width: 30px;
+  }
+}
+
+.title-encrypter {
+  animation: flashing-title 20s infinite;
+}
+
+.subtitle-encrypter {
+  margin-left: -140px;
+  animation: flashing-subtitle 20s infinite;
+}
+
+@keyframes flashing-title {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flashing-subtitle {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+.text textarea {
+  resize: none;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+  padding: 15px;
+  width: 36rem;
+  height: 26rem;
+  font-size: 23px;
+  color: #0A3871;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 20%;
+}
+
+.encryptor__visual {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-width: 19rem;
+  padding: 0 10px 0 10px;
+  width: 30%;
+  margin: 0;
+}
+
+.encryptor__visual__container__style {
+  background: #FFFFFF;
+  width: 300px;
+  height: 40rem;
+  border-radius: 32px;
+  box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.2);
+}
+
+.message__container {
+  display: none;
+  flex-direction: column;
+}
+
+.button {
+  height: 50px;
+  width: 250px;
+  border-radius: 18px;
+  font-size: 18px;
+}
+
+
+.message__container .message, .message__container .button__container {
+  width: 100%;
+}
+
+.message__container .message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.message__container .message p {
+  overflow-y: auto;
+  max-height: 29rem;
+  height: fit-content;
+  overflow-wrap: break-word;
+  width: 250px;
+  font-size: 20px;
+  color: #495057;
+}
+
+.message__container .button__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+}
+
+.no__message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.no__text__img {
+  width: 15rem;
+}
+
+.no__message h2, .no__message p {
+  text-align: center;
+}
+
+.no__message h2 {
+  font-size: 20px;
+  width: 14rem;
+  margin-bottom: 5px;
+  color: #343A40;
+}
+
+.no__message p {
+  width: 250px;
+  font-size: 14px;
+  color: #495057;
+}
+
+.transparent__button__style {
+  background: transparent;
+  border: solid 1px #0A3871;
+  color: #0A3871;
+}
+
+.transparent__button__style:active {
+  background: #c3d0d7;
+} 
+
+.blue__button__style {
+  background: #0A3871;
+  border: none;
+  color: white;
+}
+
+.blue__button__style:active {
+  background: #0A3F5B;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    height: 100%;
+ }
+
+  .encryptor__text {
+    width: 100%;
+    height: 40rem;
+    padding: 0;
+  }
+
+  .encryptor__text .text textarea {
+    width: 85%;
+  }
+
+  .encryptor__visual {
+    width: 100%;
+    justify-content: center;
+    padding: 0 0 20px 0;
+  }
+
+  .encryptor__visual .no__text__img {
+    display: none;
+  }
+
+  .encryptor__visual__container__style {
+    width: 90%;
+    height: auto;
+  }
+
+  .no__message {
+    box-sizing: border-box;
+    padding: 20px 0;
+  }
+
+  .no__message p {
+    min-width: 250px;
+    width: auto;
+    padding: 0 30px;
+  }
+
+  .no__message h2 {
+    min-width: 14rem;
+    width: auto;
+    padding: 0 30px;
+  }
+
+  .message__container .message {
+    margin-top: 10px;
+  }
+
+  .message__container .message p {
+    width: 70%;
+  }
+
+  .button__container .button {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    width: 40%;
+  }
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Encriptador</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="encryptor__text">
+      <div class="logo">
+        <img src="./images/Logo-alura.png" alt="logo-alura">
+        <h1 class="title-encrypter">Encriptador</h1>
+        <h1 class="subtitle-encrypter">Challenge ONE</h1>
+        <a href="https://github.com/David-HernandezM" target="_blank" class="github__profile__link">
+          <img src="./images/logotipo-de-github.png" alt="Github-Profile">
+        </a>
+      </div>
+      <div class="text">
+        <textarea cols="70" id="user-input" placeholder="Ingrese el texto aqui"></textarea>
+      </div>
+      <div class="options">
+        <button class="button blue__button__style" id="encrypt">Encriptar</button>
+        <button class="button transparent__button__style" id="decrypt">Desencriptar</button>
+      </div>
+    </div>
+    <div class="encryptor__visual">
+       <div class="no__message encryptor__visual__container__style">
+         <img src="./images/Muñeco.png" alt="no-text-inserted" class="no__text__img">
+         <h2>Ningún mensaje fue encriptado</h2>
+         <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+       </div>
+       <div class="message__container encryptor__visual__container__style">
+         <div class="message">
+           <p id="text-encrypted"></p>
+         </div>
+         <div class="button__container">
+          <button class="button transparent__button__style" id="copy-button">Copiar</button>
+         </div>
+       </div>
+    </div>
+    <script src="./encrypter.js" type="text/javascript"></script>
+  </body>
+</html>
